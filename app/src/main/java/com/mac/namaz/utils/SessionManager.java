@@ -6,11 +6,12 @@ public class SessionManager {
 
 	private SharedPreferences sharedPreferences;
 	private Context mContext;
+	private static String prefKey = "com.mac.namazapp";
 	
 	public SessionManager(Context context)
 	{
 		mContext = context;
-		sharedPreferences = mContext.getSharedPreferences("Adeerpref", Context.MODE_PRIVATE);
+		sharedPreferences = mContext.getSharedPreferences(prefKey, Context.MODE_PRIVATE);
 	}
 	
 	public SharedPreferences getSharedPreferences()
